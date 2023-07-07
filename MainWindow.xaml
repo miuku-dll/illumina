@@ -1,0 +1,81 @@
+<Window x:Class="illumina.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:illumina"
+        xmlns:viewModel="clr-namespace:illumina.MVVM.ViewModel"
+
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Height="500" Width="700">
+
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border CornerRadius="20">
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF2F3344" Offset="0.0"/>
+                <GradientStop Color="#272a37" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Image Width="30" HorizontalAlignment="Left" Margin="11,10,0,0"
+                   Name="logo"
+                    RenderTransformOrigin="0.5,0.5">
+                <Image.Source>
+                    <BitmapImage DecodePixelWidth="40" DecodePixelHeight="30" UriSource="C:\Users\Administrator\Documents\VS Projects\c#\illumina\Images\illumina.png" />
+                </Image.Source>
+            </Image>
+
+            <TextBlock HorizontalAlignment="Left"
+                       Text="illumina" Height="22" Margin="47,13,0,5" Foreground="White"
+                       FontSize="18" FontWeight="SemiBold"/>
+
+
+            <RadioButton Content="Home"
+                         Foreground="#585f6d"
+                         FontSize="15"
+                         FontWeight="SemiBold"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Left"
+                         Margin="183,14,0,0"
+                         Style="{StaticResource MenuButtonTheme}"/>
+
+
+            <RadioButton Content="About"
+                Foreground="#585f6d"
+                FontSize="15"
+                FontWeight="SemiBold"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="259,14,0,0"
+                Style="{StaticResource MenuButtonTheme}"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+            
+
+        </Grid>
+    </Border>
+</Window>
