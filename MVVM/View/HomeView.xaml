@@ -52,11 +52,16 @@
             FontSize="18"
             HorizontalAlignment="Left"/>
 
-            <TextBlock
-            Text="Log in"
-            Foreground="#1d90f5"
-            FontSize="18"
-            Margin="162,0,425,0"/>
+            <Button
+                Content="Log in"
+                Name="QuickLogin"
+                Foreground="#1d90f5"
+                FontSize="18"
+                Background="Transparent"
+                BorderThickness="0"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="162,0,416,13" Height="30" Click="Button_Click"/>
         </Grid>
     </Grid>
 </UserControl>

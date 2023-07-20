@@ -52,7 +52,6 @@
 
 
             <RadioButton Content="Home"
-                         Foreground="#585f6d"
                          FontSize="15"
                          FontWeight="SemiBold"
                          VerticalAlignment="Top"
@@ -62,7 +61,6 @@
 
 
             <RadioButton Content="About"
-                Foreground="#585f6d"
                 FontSize="15"
                 FontWeight="SemiBold"
                 VerticalAlignment="Top"

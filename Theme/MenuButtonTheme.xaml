@@ -5,6 +5,7 @@
            TargetType="{x:Type RadioButton}"
            x:Key="MenuButtonTheme">
         <Style.Setters>
+            <Setter Property="Foreground" Value="#585f6d"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
@@ -24,7 +25,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#202020"/>
+                <Setter Property="Foreground" Value="#fff"/>
             </Trigger>
         </Style.Triggers>
     </Style>
